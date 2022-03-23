@@ -22,7 +22,7 @@ socket.addEventListener('message', ev => {
 });
 ```
 
-**This package aims to** fix these shortcomings and **add all these missing features for custom EventListeners**.
+**This package aims to** fix these shortcomings and **add all these missing features for custom EventTargets**.
 
 ## Installation
 
