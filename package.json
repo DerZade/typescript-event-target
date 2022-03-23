@@ -1,0 +1,27 @@
+{
+  "name": "typed-event-target",
+  "version": "1.0.0",
+  "description": "Strictly typed EventTarget which extends EventTarget directly to allow effortless migration with basically no additional bundle-size.",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "module": "./dist/index.mjs",
+  "homepage": "https://github.com/DerZade/typed-event-target#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DerZade/typed-event-target.git"
+  },
+  "bugs": {
+    "url" : "https://github.com/DerZade/typed-event-target/issues",
+    "email" : "derzade@gmail.com"
+  },
+  "scripts": {
+    "build": "tsup --dts --minify --format cjs,esm ./src/index.ts"
+  },
+  "keywords": [],
+  "author": "Jonas Schade <derzade@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "tsup": "^5.12.1",
+    "typescript": "^4.6.2"
+  }
+}
