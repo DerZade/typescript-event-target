@@ -1,1 +1,1 @@
-var s=class extends EventTarget{dispatchTypedEvent(r,e){return super.dispatchEvent(e)}};export{s as TypedEventTarget};
+var e=class extends EventTarget{dispatchTypedEvent(s,t){return super.dispatchEvent(t)}};export{e as TypedEventTarget};
