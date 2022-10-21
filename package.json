@@ -15,7 +15,7 @@
     "email": "derzade@gmail.com"
   },
   "scripts": {
-    "build": "tsup --dts --minify --format cjs,esm ./src/index.ts"
+    "build": "tsup --tsconfig ./tsconfig.json --dts --minify --format cjs,esm ./src/index.ts"
   },
   "keywords": [],
   "author": "Jonas Schade <derzade@gmail.com>",
