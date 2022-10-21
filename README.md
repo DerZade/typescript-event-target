@@ -10,7 +10,7 @@ But `EventTarget` lacks in terms of developer experience and Typescript integrat
 
 The weird thing is, that with JS-native objects, which implement `EventTarget` (like WebSocket, Worker or any HTML-Elements), you get all those features out of the box:
 
-![](https://i.imgur.com/D1OVibJ.png)
+![vs code](https://user-images.githubusercontent.com/12705416/197210563-c1be6c36-b016-4ef2-9ece-c149294f0bd1.png)
 
 ```ts
 const socket = new WebSocket('ws://example.com');
