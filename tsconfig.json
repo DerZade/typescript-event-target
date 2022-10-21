@@ -1,6 +1,5 @@
 {
     "compilerOptions": {
-        "outDir": "dist",
         "strictNullChecks": true,
         "noImplicitAny": true,
         "noImplicitReturns": true
