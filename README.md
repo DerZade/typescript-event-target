@@ -116,3 +116,12 @@ eventTarget.addEventListener('mine', e => {
     // e is of type MyEvent
 });
 ```
+
+## Bundle Size
+
+This package mostly only contains TypeScript definitions. Therefore, it amounts up to basically no bundle size. The only thing that is bundled is the `dispatchTypedEvent`-method, which is just a simple wrapper around the native `dispatchEvent`-method.
+
+||Deflate|Brotli|Gzip|Uncompressed|
+|---|---:|---:|---:|---:|
+|ES Module|**92 Bytes**|95 Bytes|110 Bytes|119 Bytes|
+|Common JS|336 Bytes|**308 Bytes**|354 Bytes|599 Bytes|
