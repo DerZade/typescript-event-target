@@ -1,9 +1,9 @@
-interface TypedEventListener<M, T extends keyof M> {
-    (evt: M[T]): void | Promise<void>;
-}
+type TypedEventListener<M, T extends keyof M> = (
+    evt: M[T]
+) => void | Promise<void>;
 
 interface TypedEventListenerObject<M, T extends keyof M> {
-    handleEvent(evt: M[T]): void | Promise<void>;
+    handleEvent: (evt: M[T]) => void | Promise<void>;
 }
 
 type ValueIsEvent<T> = {
@@ -38,19 +38,19 @@ export interface TypedEventTarget<M extends ValueIsEvent<M>> {
      *
      * The event listener is appended to target's event listener list and is not
      * appended if it has the same type, callback, and capture. */
-    addEventListener<T extends keyof M & string>(
+    addEventListener: <T extends keyof M & string>(
         type: T,
         listener: TypedEventListenerOrEventListenerObject<M, T> | null,
-        options?: boolean | AddEventListenerOptions,
-    ): void;
+        options?: boolean | AddEventListenerOptions
+    ) => void;
 
     /** Removes the event listener in target's event listener list with the same
      * type, callback, and options. */
-    removeEventListener<T extends keyof M & string>(
+    removeEventListener: <T extends keyof M & string>(
         type: T,
         callback: TypedEventListenerOrEventListenerObject<M, T> | null,
-        options?: EventListenerOptions | boolean,
-    ): void;
+        options?: EventListenerOptions | boolean
+    ) => void;
 
     /**
      * Dispatches a synthetic event event to target and returns true if either
@@ -58,7 +58,7 @@ export interface TypedEventTarget<M extends ValueIsEvent<M>> {
      * was not invoked, and false otherwise.
      * @deprecated To ensure type safety use `dispatchTypedEvent` instead.
      */
-    dispatchEvent(event: Event): boolean;
+    dispatchEvent: (event: Event) => boolean;
 }
 export class TypedEventTarget<M extends ValueIsEvent<M>> extends EventTarget {
     /**
@@ -68,7 +68,7 @@ export class TypedEventTarget<M extends ValueIsEvent<M>> extends EventTarget {
      */
     public dispatchTypedEvent<T extends keyof M>(
         _type: T,
-        event: M[T],
+        event: M[T]
     ): boolean {
         return super.dispatchEvent(event);
     }
