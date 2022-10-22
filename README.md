@@ -1,5 +1,5 @@
 # TypedEventTarget
-_Strictly typed [EventTarget](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget) which extends `EventTarget` directly to allow effortless migration with basically no additional bundle-size._
+_Strictly typed [EventTarget](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget) which works with all Event-Types and extends `EventTarget` directly to allow effortless migration with basically no additional bundle-size._
 
 ## Motivation
 Since `EventTarget` support landed in NodeJS v14.5, they are the only way to go forward, when talking about event driven JS.  
@@ -10,7 +10,7 @@ But `EventTarget` lacks in terms of developer experience and Typescript integrat
 
 The weird thing is, that with JS-native objects, which implement `EventTarget` (like WebSocket, Worker or any HTML-Elements), you get all those features out of the box:
 
-![vs code](https://user-images.githubusercontent.com/12705416/197210563-c1be6c36-b016-4ef2-9ece-c149294f0bd1.png)
+![Visual Studio Code](https://user-images.githubusercontent.com/12705416/197210563-c1be6c36-b016-4ef2-9ece-c149294f0bd1.png)
 
 ```ts
 const socket = new WebSocket('ws://example.com');
@@ -68,7 +68,7 @@ eventTarget.addEventListener('time', event => {
 ```
 
 ### Dispatching Events
-`TypedEventTarget` directly extends `EventTarget`, so [`dispatchEvent`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent) **works as expected**, but is marked as deprecated. The reason for this is that `dispatchEvent` cannot be strictly typed easily. Instead `TypedEventTarget` introduces a `dispatchTypedEvent` method, which is strictly typed by taking an additional `_type` parameter (just used for type checking).
+`TypedEventTarget` directly extends `EventTarget`, so [`dispatchEvent`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent) **works as expected**, but is marked as deprecated. The reason for this is that `dispatchEvent` cannot be strictly typed easily. Instead, `TypedEventTarget` introduces a `dispatchTypedEvent` method, which is strictly typed by taking an additional `_type` parameter (just used for type checking).
 
 ```ts
 interface MyEventMap {
