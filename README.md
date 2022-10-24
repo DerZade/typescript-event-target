@@ -32,7 +32,7 @@ socket.addEventListener('message', (ev) => {
 ### NPM
 
 ```
-npm i --save typed-event-target
+npm i --save typescript-event-target
 ```
 
 ### Deno
