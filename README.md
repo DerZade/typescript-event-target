@@ -31,15 +31,20 @@ socket.addEventListener('message', (ev) => {
 
 ### NPM
 
+Install the package:
 ```
 npm i --save typescript-event-target
 ```
+Then import as follows:
+```ts
+import { TypedEventTarget } from 'typescript-event-target';
+```
 
 ### Deno
-
+```ts
+import { TypedEventTarget } from 'https://deno.land/x/typescript_event_target/mod.ts';
 ```
-tbd
-```
+>  :warning: Warning: It is best practice to "pin" to a particular version. `https://deno.land/x/` supports using git tags in the URL to direct you at a particular version. So to use version 1.0.0 of TypedEventTarget, you would want to import `https://deno.land/x/typescript_event_target@v1.0.0/mod.ts`.
 
 ## Usage
 
