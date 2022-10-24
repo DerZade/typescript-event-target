@@ -111,7 +111,7 @@ myTarget.addEventListener('time', (e) => {
 
 ### Different Event Types
 
-Your EventMap can include any type, that extends [`Event`](https://developer.mozilla.org/en-US/docs/Web/API/Event). These can be native Events or even own classes:
+Your EventMap can include [`Event`](https://developer.mozilla.org/en-US/docs/Web/API/Event) as well as any type, that extends [`Event`](https://developer.mozilla.org/en-US/docs/Web/API/Event). These can be native Events or even own classes:
 
 ```ts
 class MyEvent extends Event {
