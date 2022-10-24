@@ -11,6 +11,9 @@
     "type": "git",
     "url": "https://github.com/DerZade/typescript-event-target.git"
   },
+  "files": [
+    "dist"
+  ],
   "bugs": {
     "url": "https://github.com/DerZade/typescript-event-target/issues",
     "email": "derzade@gmail.com"
