@@ -26,7 +26,7 @@
   },
   "keywords": [],
   "author": "Jonas Schade <derzade@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "eslint-config-standard-with-typescript": "^23.0.0",
     "prettier": "^2.7.1",
