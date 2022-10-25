@@ -1,7 +1,7 @@
 {
   "name": "typescript-event-target",
   "version": "1.0.1",
-  "description": "Strictly typed EventTarget which extends EventTarget directly to allow effortless migration with basically no additional bundle-size.",
+  "description": "Strictly typed EventTarget which works with all Event-Types and extends EventTarget directly to allow effortless migration with basically no additional bundle-size.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "typings": "./dist/index.d.ts",
@@ -24,7 +24,15 @@
     "test": "tsd",
     "fmt": "prettier --write ."
   },
-  "keywords": [],
+  "keywords": [
+    "event-target",
+    "typescript",
+    "EventTarget",
+    "ts",
+    "browser",
+    "typed",
+    "nodejs"
+  ],
   "author": "Jonas Schade <derzade@gmail.com>",
   "license": "MIT",
   "devDependencies": {
