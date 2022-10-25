@@ -1,6 +1,6 @@
 {
   "name": "typescript-event-target",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Strictly typed EventTarget which works with all Event-Types and extends EventTarget directly to allow effortless migration with basically no additional bundle-size.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
