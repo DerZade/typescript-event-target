@@ -2,6 +2,14 @@
 
 _Strictly typed [EventTarget](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget) which works with all Event-Types and extends `EventTarget` directly to allow effortless migration with basically no additional bundle-size._
 
+<div align="center">
+
+[![NPM](https://img.shields.io/npm/v/typescript-event-target?style=flat-square)](https://npmjs.com/package/typescript-event-target)
+[![Deno](https://img.shields.io/badge/available%20on-deno.land/x-lightgrey.svg?logo=deno&labelColor=black&style=flat-square)](https://deno.land/x/typescript_event_target/)
+[![License](https://img.shields.io/github/license/derzade/typescript-event-target?style=flat-square)](/LICENSE)
+
+</div>
+
 ## Motivation
 
 Since `EventTarget` support landed in NodeJS v14.5, they are the only way to go forward, when talking about event driven JS.  
