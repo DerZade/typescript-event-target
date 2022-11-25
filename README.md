@@ -2,12 +2,6 @@
 
 _Strictly typed [`EventTarget`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget) that directly extends `EventTarget` to function as a drop-in replacement. It works with all Event-Types and accounts for basically no additional bundle-size._
 
-<div align="center">
-
-
-
-</div>
-
 ## Motivation
 
 Since `EventTarget` support landed in NodeJS v14.5, they are the only way to go forward, when talking about event driven JS.  
