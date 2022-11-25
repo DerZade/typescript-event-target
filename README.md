@@ -1,12 +1,10 @@
-# TypedEventTarget
+# TypedEventTarget [![NPM](https://img.shields.io/npm/v/typescript-event-target?style=flat-square)](https://npmjs.com/package/typescript-event-target) [![Deno](https://img.shields.io/badge/available%20on-deno.land/x-lightgrey.svg?logo=deno&labelColor=black&style=flat-square)](https://deno.land/x/typescript_event_target/) [![License](https://img.shields.io/github/license/derzade/typescript-event-target?style=flat-square)](/LICENSE)
 
 _Strictly typed [`EventTarget`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget) that directly extends `EventTarget` to function as a drop-in replacement. It works with all Event-Types and accounts for basically no additional bundle-size._
 
 <div align="center">
 
-[![NPM](https://img.shields.io/npm/v/typescript-event-target?style=flat-square)](https://npmjs.com/package/typescript-event-target)
-[![Deno](https://img.shields.io/badge/available%20on-deno.land/x-lightgrey.svg?logo=deno&labelColor=black&style=flat-square)](https://deno.land/x/typescript_event_target/)
-[![License](https://img.shields.io/github/license/derzade/typescript-event-target?style=flat-square)](/LICENSE)
+
 
 </div>
 
@@ -21,17 +19,7 @@ But `EventTarget` lacks in terms of developer experience and Typescript integrat
 
 The weird thing is, that with JS-native objects, which implement `EventTarget` (like WebSocket, Worker or any HTML-Elements), you get all those features out of the box:
 
-![Visual Studio Code](https://user-images.githubusercontent.com/12705416/197210563-c1be6c36-b016-4ef2-9ece-c149294f0bd1.png)
-
-```ts
-const socket = new WebSocket('ws://example.com');
-socket.addEventListener('close', (ev) => {
-    // ev is of type CloseEvent
-});
-socket.addEventListener('message', (ev) => {
-    // ev is of type MessageEvent<any>
-});
-```
+<img alt="Visual Studio Code" src="https://user-images.githubusercontent.com/12705416/203958225-7ecf9b96-8004-44d0-b670-8fcb1ae62394.png" style="width: 75%">
 
 **This package aims to** fix these shortcomings and **add all these missing features for custom EventTargets**.
 
