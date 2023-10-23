@@ -1,6 +1,6 @@
 {
   "name": "typescript-event-target",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "Strictly typed EventTarget that directly extends EventTarget to function as a drop-in replacement. It works with all Event-Types and accounts for basically no additional bundle-size.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
