@@ -1,18 +1,18 @@
-type TypedEventListener<M, T extends keyof M> = (
+export type TypedEventListener<M, T extends keyof M> = (
     evt: M[T]
 ) => void | Promise<void>;
 
-interface TypedEventListenerObject<M, T extends keyof M> {
+export interface TypedEventListenerObject<M, T extends keyof M> {
     handleEvent: (evt: M[T]) => void | Promise<void>;
 }
+
+export type TypedEventListenerOrEventListenerObject<M, T extends keyof M> =
+    | TypedEventListener<M, T>
+    | TypedEventListenerObject<M, T>;
 
 type ValueIsEvent<T> = {
     [key in keyof T]: Event;
 };
-
-type TypedEventListenerOrEventListenerObject<M, T extends keyof M> =
-    | TypedEventListener<M, T>
-    | TypedEventListenerObject<M, T>;
 
 export interface TypedEventTarget<M extends ValueIsEvent<M>> {
     /** Appends an event listener for events whose type attribute value is type.
