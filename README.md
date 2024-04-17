@@ -1,4 +1,4 @@
-# TypedEventTarget [![NPM](https://img.shields.io/npm/v/typescript-event-target?style=flat-square)](https://npmjs.com/package/typescript-event-target) [![Deno](https://img.shields.io/badge/available%20on-deno.land/x-lightgrey.svg?logo=deno&labelColor=black&style=flat-square)](https://deno.land/x/typescript_event_target/) [![License](https://img.shields.io/github/license/derzade/typescript-event-target?style=flat-square)](/LICENSE)
+# TypedEventTarget [![NPM](https://img.shields.io/npm/v/typescript-event-target?style=flat-square)](https://npmjs.com/package/typescript-event-target) [![JSR](https://img.shields.io/jsr/v/%40derzade/typescript-event-target?style=flat-square)](https://jsr.io/@derzade/typescript-event-target/) [![Deno](https://img.shields.io/badge/available%20on-deno.land/x-lightgrey.svg?logo=deno&labelColor=black&style=flat-square)](https://deno.land/x/typescript_event_target/) [![License](https://img.shields.io/github/license/derzade/typescript-event-target?style=flat-square)](/LICENSE)
 
 _Strictly typed [`EventTarget`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget) that directly extends `EventTarget` to function as a drop-in replacement. It works with all Event-Types and accounts for basically no additional bundle-size._
 
@@ -34,6 +34,14 @@ import { TypedEventTarget } from 'typescript-event-target';
 ```
 
 ### Deno
+
+Either install from [JSR](https://jsr.io/@derzade/typescript-event-target/doc/~/TypedEventListenerObject):
+
+```
+deno add @derzade/typescript-event-target
+```
+
+or import directly form `deno.land/x/`:
 
 ```ts
 import { TypedEventTarget } from 'https://deno.land/x/typescript_event_target/mod.ts';
