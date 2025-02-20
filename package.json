@@ -20,7 +20,7 @@
   },
   "scripts": {
     "build": "tsup --tsconfig ./tsconfig.json --dts --minify --format cjs,esm ./src/index.ts",
-    "lint": "eslint --ext .js,.ts ./src",
+    "lint": "eslint .",
     "test": "tsd",
     "fmt": "prettier --write ."
   },
@@ -36,10 +36,15 @@
   "author": "Jonas Schade <derzade@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "eslint-config-standard-with-typescript": "^23.0.0",
-    "prettier": "^2.7.1",
+    "@eslint/js": "^9.20.0",
+    "eslint": "^9.20.1",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "jiti": "^2.4.2",
+    "prettier": "^3.5.1",
     "tsd": "^0.24.1",
     "tsup": "^6.3.0",
-    "typescript": "^4.8.4"
+    "typescript": "^4.9.5",
+    "typescript-eslint": "^8.24.1"
   }
 }
