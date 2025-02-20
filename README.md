@@ -7,9 +7,9 @@ _Strictly typed [`EventTarget`](https://developer.mozilla.org/en-US/docs/Web/API
 Since `EventTarget` support landed in NodeJS v14.5, they are the only way to go forward, when talking about event driven JS.  
 But `EventTarget` lacks in terms of developer experience and Typescript integration. To be specific:
 
--   No strictly typed event listeners & events
--   Missing proper IntelliSense integration
--   No auto-complete for event types
+- No strictly typed event listeners & events
+- Missing proper IntelliSense integration
+- No auto-complete for event types
 
 The weird thing is, that with JS-native objects, which implement `EventTarget` (like WebSocket, Worker or any HTML-Elements), you get all those features out of the box:
 

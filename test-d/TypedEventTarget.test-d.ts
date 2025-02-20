@@ -28,7 +28,7 @@ eventTarget.addEventListener('my', (e) => {
 });
 
 eventTarget.addEventListener('my', (e) => {
-    // @ts-expect-error
+    // @ts-expect-error | This should error because MyEvent2 is not the correct type (should be MyEvent)
     expectType<MyEvent2>(e);
 });
 
@@ -52,15 +52,15 @@ eventTarget.addEventListener('custom', (e) => {
 
 // ----- Unknown event types should error
 
-// @ts-expect-error
-eventTarget.addEventListener('unknown', (e) => {});
+// @ts-expect-error | This should error because 'unknown' is not included in the EventMap
+eventTarget.addEventListener('unknown', () => {});
 
-// @ts-expect-error
-eventTarget.removeEventListener('unknown', (e) => {});
+// @ts-expect-error | This should error because 'unknown' is not included in the EventMap
+eventTarget.removeEventListener('unknown', () => {});
 
 // ----- non-Event types in a EventMap should error
 
-// @ts-expect-error
+// @ts-expect-error  | This should error because the type of 'foo2' does not extend Event
 void new TypedEventTarget<{
     foo1: Event;
     foo2: { bar: string };
@@ -84,8 +84,8 @@ expectType<(_type: 'custom', e: CustomEvent<number>) => boolean>(
     eventTarget.dispatchTypedEvent<'custom'>
 );
 
-// @ts-expect-error
+// @ts-expect-error | This should error because the event types don't match
 eventTarget.dispatchTypedEvent('my', new MyEvent2('my2'));
 
-// @ts-expect-error
+// @ts-expect-error | This should error because 'unknown' is not included in the EventMap
 eventTarget.dispatchTypedEvent('unknown', new Event('unknown'));
