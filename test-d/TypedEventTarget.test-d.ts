@@ -42,11 +42,11 @@ eventTarget.removeEventListener('event', (e) => {
     expectType<Event>(e);
 });
 
-eventTarget.addEventListener('my', (e) => {
+eventTarget.removeEventListener('my', (e) => {
     expectType<MyEvent>(e);
 });
 
-eventTarget.addEventListener('custom', (e) => {
+eventTarget.removeEventListener('custom', (e) => {
     expectType<CustomEvent<number>>(e);
 });
 
